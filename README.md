@@ -1,5 +1,7 @@
 ![HatClient](http://paswd4.com/s/x84e3q.png)
 
+汉化版
+
 ## About
 #### HatClient is a custom client for forks of [hack.chat](https://github.com/AndrewBelt/hack.chat "hack.chat")
 ![About](http://s.paswd4.com/hc03.png)
