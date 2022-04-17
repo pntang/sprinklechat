@@ -4,7 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
-    <title>HatClient v0.2.1</title>
+    <title>HackChat</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/newstyle.css">
@@ -17,19 +17,19 @@
 	<nav class="nav-extended black" role="navigation">
 		<div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">HatClient<span>v0.2.1</span></a>
 		<ul class="right hide-on-med-and-down">
-			<li><a href="#about">About</a></li>
-			<li><a href="#settingsmodal">Settings</a></li>
+			<li><a href="#about">关于</a></li>
+			<li><a href="#settingsmodal">设置</a></li>
 		</ul>
 		<ul id="nav-mobile" class="right side-nav">
-			<li><a href="#about">About</a></li>
-			<li><a href="#settingsmodal">Settings</a></li>
+			<li><a href="#about">关于</a></li>
+			<li><a href="#settingsmodal">设置</a></li>
 		</ul>
-		<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+		<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">菜单</i></a>
 		</div>
 		<div class="nav-content">
 	</nav>
 	<nav id="optionsNav" class="nav-extended black hidden" role="navigation">
-		<div class="nav-wrapper container"><span>Chat Options:</span>
+		<div class="nav-wrapper container"><span>( ﾟ∀。)</span>
 			<ul class="right">
 				<li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Invite User" href="#invitemodal"><i class="material-icons">forum</i></a></li>
 				<li><a class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ignore User" href="#ignoremodal"><i class="material-icons">volume_off</i></a></li>
@@ -54,26 +54,26 @@
       </div>
       <div class="row">
         <div class="input-field col s9 offset-s1">
-          <input id="room" type="text" placeholder="Room (eg: programming, no ?)">
+          <input id="room" type="text" placeholder="房间名">
         </div>
       </div>
       <div class="row">
         <div class="input-field col s9 offset-s1">
-          <input id="username" type="text" placeholder="Username">
+          <input id="username" type="text" placeholder="用户名">
         </div>
       </div>
       <div class="row">
         <div class="input-field col s9 offset-s1">
-          <input id="password" type="password" placeholder="Password (optional)">
+          <input id="password" type="password" placeholder="密码(可选)">
         </div>
       </div>
       <div class="row">
         <div class="col s9 offset-s1 center-align">
 			<p class="right">
 				<input type="checkbox" class="filled-in" id="rememberme"/>
-				<label for="rememberme">Remember Me</label>
+				<label for="rememberme">记住我</label>
 			</p><br><br><br>
-          <button class="btn waves-effect waves-light right" onclick="initialize()">Join Chat</button>
+          <button class="btn waves-effect waves-light right" onclick="initialize()">✈️</button>
         </div>
       </div>
     </div>
@@ -100,29 +100,29 @@
 	 <!-- Modal Structure -->
 	 <div id="settingsmodal" class="modal bottom-sheet">
 		<div class="modal-content">
-			<h4>HatClient Settings</h4>
+			<h4>设置</h4>
 				<div class="col s12">
 				<div class="row">
 				<div class="input-field col s1">
 					<select id="themechoice">
-						<option value="default">Default</option>
-						<option value="dark">Dark</option>
-						<option value="solarized">Solarized</option>
+						<option value="default">默认主题</option>
+						<option value="dark">夜间</option>
+						<option value="solarized">自适应</option>
 					</select>
-					<label>Theme:</label>
+					<label>主题:</label>
 				</div>
 				</div>
 				</div>
 		</div>
 
 		<div class="modal-footer">
-		  <a href="#!" onclick="saveSettings()" class=" modal-action modal-close waves-effect waves-green btn-flat">Save Settings</a>
+		  <a href="#!" onclick="saveSettings()" class=" modal-action modal-close waves-effect waves-green btn-flat">保存设置</a>
 		</div>
 	</div>
 	<!-- -->
 	<div id="about" class="modal">
 		<div class="modal-content">
-			<h4>About HatClient</h4>
+			<h4>关于 HatClient</h4>
 				<p>HatClient is a custom client for forks of <a href="#">hack.chat</a>.
 				<br><br>
 				The goal of HatClient is to provide a working custom interface that is much less minimalistic than the design of hack.chat's built-in client.
@@ -157,7 +157,7 @@
 	</div>
 	<div id="help" class="modal">
 		<div class="modal-content">
-			<h4>HatClient Help</h4>
+			<h4>HatClient 帮助</h4>
 			<p>Help coming soon, sorry.</p>
 		</div>
 		<div class="modal-footer">
