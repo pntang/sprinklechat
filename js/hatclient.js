@@ -80,8 +80,8 @@ function join(channel, cUsername, cPassword, cServer) {
 		ws = new WebSocket('wss://hack.chat/chat-ws');
 	} else if (cServer == "crosstchat") {
 		ws = new WebSocket('wss://ws.crosst.chat:35197');
-	} else if (cServer == "toastychat") {
-		ws = new WebSocket('wss://chat.toastystoemp.com/chatws');
+	} else if (cServer == "sprchat") {
+		ws = new WebSocket('wss://sprchatport.run.goorm.io');
 	} else if (cServer == "sleepychat") {
 		ws = new WebSocket('ws://sleepykev.tk:6060');
 	} else if (cServer == "hatchat") {
