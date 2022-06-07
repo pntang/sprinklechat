@@ -82,8 +82,8 @@ function join(channel, cUsername, cPassword, cServer) {
 		ws = new WebSocket('wss://ws.crosst.chat:35197');
 	} else if (cServer == "sprchat") {
 		ws = new WebSocket('wss://sprchatport.run.goorm.io');
-	} else if (cServer == "sleepychat") {
-		ws = new WebSocket('ws://sleepykev.tk:6060');
+	} else if (cServer == "sprchat2") {
+		ws = new WebSocket('wss://chatport.spr233.eu.org');
 	} else if (cServer == "hatchat") {
 		ws = new WebSocket('ws://paswd4.com/HatChatServer/');
 	} else if (cServer == "minuxchat") {
