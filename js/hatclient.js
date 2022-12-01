@@ -37,7 +37,7 @@ function initialize() {
 
            event.preventDefault();
 		   if (message == "/help") {
-			pushMessage({nick: '## HatClient ##', text: 'Commands: /help, /online, /stats, /morestats, /setTheme [theme], /ban [user], /kick [user].'})
+			pushMessage({nick: '## 小屋管理员 ##', text: 'Commands: /help, /online, /stats, /morestats, /setTheme [theme], /ban [user], /kick [user].'})
 		   } else if (message.substring(0, 5) == "/ban ") {
 			   var userToBan = message.substring(6);
 			   send({cmd: 'ban', nick: userToBan});
@@ -46,7 +46,7 @@ function initialize() {
 			   send({cmd: 'kick', nick: userToKick});
 		   } else if (message == "/online") {
 			    var onlineList = onlineUsers.join(', ') + '.';
-				pushMessage({nick: '## HatClient ##', text: 'Users online: ' + onlineList});
+				pushMessage({nick: '## 小屋管理员 ##', text: '在线的用户: ' + onlineList});
 		   } else if (message.substring(0, 10) == "/setTheme ") {
 			   	var setTheme = message.substring(10);
 				localStorage.setItem("theme", setTheme);
@@ -89,7 +89,7 @@ function join(channel, cUsername, cPassword, cServer) {
 	} else if (cServer == "minuxchat") {
 		ws = new WebSocket('ws://minuxgix.tk/app1/');
 	} else {
-		pushMessage({nick: '## HatClient ##', text: 'You are not connected. If you were previously in a channel, please wait a few moments.'})
+		pushMessage({nick: '## 小屋管理员 ##', text: 'You are not connected. If you were previously in a channel, please wait a few moments.'})
 	}
 
 	var wasConnected = false
@@ -106,7 +106,7 @@ function join(channel, cUsername, cPassword, cServer) {
 
 		ws.onclose = function() {
 			if (wasConnected) {
-				pushMessage({nick: '!', text: "Server disconnected. Attempting to reconnect..."})
+				pushMessage({nick: '!', text: "与小屋失联了!正在重新连接捏uwu"})
 			}
 			window.setTimeout(function() {
 				join(channel)
@@ -142,17 +142,17 @@ var COMMANDS = {
 		nicks.forEach(function(nick) {
 			userAdd(nick)
 		})
-		pushMessage({nick: '*', text: "Users online: " + nicks.join(", ")})
+		pushMessage({nick: '*', text: "在线的用户: " + nicks.join(", ")})
 	},
 	onlineAdd: function(args) {
 		var nick = args.nick
 		userAdd(nick)
-		pushMessage({nick: '*', text: nick + " has joined the channel."})
+		pushMessage({nick: '*', text: nick + " 加入聊天室"})
 	},
 	onlineRemove: function(args) {
 		var nick = args.nick
 		userRemove(nick)
-		pushMessage({nick: '*', text: nick + " has left the channel."})
+		pushMessage({nick: '*', text: nick + " 离开聊天室"})
 	},
 }
 function userAdd(nick) {
@@ -242,7 +242,7 @@ function inviteUser() {
 function ignoreUser() {
 	var userToIgnore = document.getElementById("userToIgnore").value;
 	ignoredUsers.push(userToIgnore);
-	pushMessage({nick: '## HatClient ##', text: 'You are now ignoring messages from ' + userToIgnore});
+	pushMessage({nick: '## 小屋管理员 ##', text: '已经屏蔽了该用户的消息: ' + userToIgnore});
 }
 
 function usersClear() {
