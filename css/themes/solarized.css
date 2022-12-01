@@ -50,12 +50,12 @@ li.collection-item.avatar {
 	border-bottom: 1px solid #073642 !important;
 }
 .modal {
-	background: #002b36;
-	color: #93a1a1 !important;
+	background: white;
+	color: #4D698E !important;
 }
 .modal .modal-footer {
-	background: #002b36 !important;
-	color: #93a1a1 !important;
+	background: white !important;
+	color: #4D698E !important;
 }
 .modal-footer a {
 	background: #284753 !important;
