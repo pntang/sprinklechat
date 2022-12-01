@@ -18,7 +18,7 @@ input::placeholder {
 	color: #657b83 !important;
 }
 input, textarea {
-	color: #93a1a1 !important;
+	color: #657b83 !important;
 }
 .btn {
 	background: #4D698E;
@@ -58,8 +58,8 @@ li.collection-item.avatar {
 	color: #4D698E !important;
 }
 .modal-footer a {
-	background: #284753 !important;
-	color: #002b36 !important;
+	background: #4D698E !important;
+	color: white !important;
 }
 .modal-footer a:hover {
 	background: #174662 !important;
