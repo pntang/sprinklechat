@@ -1,15 +1,15 @@
 body {
-	background: #002b36 !important;
+	background: white !important;
 	color: white !important;
 }
 .side-nav {
-	background: black !important;
+	background: white !important;
 }
 .side-nav a {
 	color: white !important;
 }
 .nav-extended a {
-	color: white !important;
+	color: #4D698E !important;
 }
 #optionsNav {
 	color: white !important;
@@ -21,19 +21,19 @@ input, textarea {
 	color: #93a1a1 !important;
 }
 .btn {
-	background: #073642;
-	color: #657b83 !important;
+	background: #4D698E;
+	color: white !important;
 }
 .btn:hover {
-	background: #174662 !important;
+	background: #4D698E !important;
 }
 ul.dropdown-content.select-dropdown li span {
 	color: #839496 !important;
-	background: #073642 !important;
+	background: #4D698E !important;
 }
 ul.dropdown-content.select-dropdown li span:hover {
 	color: #839496 !important;
-	background: #002b36 !important;
+	background: #4D698E !important;
 }
 #messages {
 	background: black !important;
