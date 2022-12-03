@@ -81,7 +81,7 @@ function join(channel, cUsername, cPassword, cServer) {
 	} else if (cServer == "crosstchat") {
 		ws = new WebSocket('wss://ws.crosst.chat:35197');
 	} else if (cServer == "sprchat") {
-		ws = new WebSocket('wss://sprchatport.run.goorm.io');
+		ws = new WebSocket('wss://chatport.spr233.eu.org');
 	} else if (cServer == "sprchat2") {
 		ws = new WebSocket('wss://chatport.spr233.eu.org');
 	} else if (cServer == "hatchat") {
