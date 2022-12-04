@@ -89,7 +89,7 @@ function join(channel, cUsername, cPassword, cServer) {
 	} else if (cServer == "minuxchat") {
 		ws = new WebSocket('ws://minuxgix.tk/app1/');
 	} else {
-		pushMessage({nick: 'SakuraBot', text: 'You are not connected. If you were previously in a channel, please wait a few moments.'})
+		pushMessage({nick: '!', text: 'You are not connected. If you were previously in a channel, please wait a few moments.'})
 	}
 
 	var wasConnected = false
@@ -106,7 +106,7 @@ function join(channel, cUsername, cPassword, cServer) {
 
 		ws.onclose = function() {
 			if (wasConnected) {
-				pushMessage({nick: '系统菌', text: "与小屋失联了!正在重新连接捏uwu"})
+				pushMessage({nick: '!', text: "与小屋失联了!正在重新连接捏uwu"})
 			}
 			window.setTimeout(function() {
 				join(channel)
@@ -253,7 +253,7 @@ function inviteUser() {
 function ignoreUser() {
 	var userToIgnore = document.getElementById("userToIgnore").value;
 	ignoredUsers.push(userToIgnore);
-	pushMessage({nick: '系统菌', text: '已经屏蔽了该用户的消息: ' + userToIgnore});
+	pushMessage({nick: '!', text: '已经屏蔽了该用户的消息: ' + userToIgnore});
 }
 
 function usersClear() {
@@ -273,22 +273,26 @@ function pushMessage(args) {
 		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle black">mood</i>'
 		args.nick = args.nick + ' <b style="background:#E5E5E5;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">YOU</b>';
 	}
-	else if (args.nick == '系统菌') {
+	else if (args.nick == '!') {
 		messageEl.classList.add('warn')
 		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle orange">error_outline</i>'
-		args.nick = args.nick + ' <b style="background:orange;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">SERVER</b>';
+		args.nick = args.nick + ' <b style="background:orange;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">服务器</b>';
+	}
+	else if (args.nick == '*') {
+		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle black">star</i>'
+		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">服务器</b>';
 	}
 	else if (args.nick == 'SakuraBot') {
-		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle black">star</i>'
-		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">SERVER</b>';
+		messageEl.innerHTML = messageEl.innerHTML + '<img src="img/hat.png" alt="" class="circle">'
+		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">系统</b>';
 	}
 	else if (args.admin) {
 		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle red">verified_user</i>'
-		args.nick = args.nick + ' <b style="background:red;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">ADMIN</b>';
+		args.nick = args.nick + ' <b style="background:red;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">站长</b>';
 	}
 	else if (args.mod) {
 		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle green">verified_user</i>'
-		args.nick = args.nick + ' <b style="background:#4CAF50;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">MOD</b>';
+		args.nick = args.nick + ' <b style="background:#4CAF50;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">管理员</b>';
 	} else if (args.trip == "15aMxC") {
 		messageEl.innerHTML = messageEl.innerHTML + '<img src="img/hat.png" alt="" class="circle">'
 		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">HatClient Creator</b>';
