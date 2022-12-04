@@ -278,7 +278,7 @@ function pushMessage(args) {
 		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle orange">error_outline</i>'
 		args.nick = args.nick + ' <b style="background:orange;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">SERVER</b>';
 	}
-	else if (args.nick == '*') {
+	else if (args.nick == 'SakuraBot') {
 		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle black">star</i>'
 		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">SERVER</b>';
 	}
