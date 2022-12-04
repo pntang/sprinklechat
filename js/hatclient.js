@@ -313,7 +313,7 @@ function pushMessage(args) {
 		nickSpanEl.appendChild(tripEl)
 	} else {
 		var tripEl = document.createElement('p')
-		tripEl.innerHTML = tripEl.innerHTML + "<span style='color: grey'>No Trip</span>"
+		tripEl.innerHTML = tripEl.innerHTML + "<span style='color: grey'> </span>"
 		nickSpanEl.appendChild(tripEl)
 	}
 
