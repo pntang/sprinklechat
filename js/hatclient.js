@@ -222,6 +222,17 @@ function loadTheme() {
 		document.getElementById("curTheme").innerHTML = " Solarized";
 		var themeChoice = document.getElementById("themechoice");
 		themeChoice.value = localStorage.getItem("theme");
+	} else if (clientTheme == "sakura") { 
+		var head = document.head;
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.id = 'themesheet';
+		link.href = 'css/themes/sakura.css';
+		head.appendChild(link);
+		console.log("DEBUG - **Solarized theme loaded**");
+		document.getElementById("curTheme").innerHTML = " Sakura";
+		var themeChoice = document.getElementById("themechoice");
+		themeChoice.value = localStorage.getItem("theme");
 	} else {
 		localStorage.setItem("theme", "default");
 		document.getElementById("curTheme").innerHTML = " Default";
