@@ -106,7 +106,7 @@ function join(channel, cUsername, cPassword, cServer) {
 
 		ws.onclose = function() {
 			if (wasConnected) {
-				pushMessage({nick: 'SakuraBot', text: "与小屋失联了!正在重新连接捏uwu"})
+				pushMessage({nick: '系统菌', text: "与小屋失联了!正在重新连接捏uwu"})
 			}
 			window.setTimeout(function() {
 				join(channel)
@@ -133,7 +133,7 @@ var COMMANDS = {
 		pushMessage(args)
 	},
 	warn: function(args) {
-		args.nick = '!'
+		args.nick = '系统菌'
 		pushMessage(args)
 	},
 	onlineSet: function(args) {
@@ -253,7 +253,7 @@ function inviteUser() {
 function ignoreUser() {
 	var userToIgnore = document.getElementById("userToIgnore").value;
 	ignoredUsers.push(userToIgnore);
-	pushMessage({nick: 'SakuraBot', text: '已经屏蔽了该用户的消息: ' + userToIgnore});
+	pushMessage({nick: '系统菌', text: '已经屏蔽了该用户的消息: ' + userToIgnore});
 }
 
 function usersClear() {
@@ -273,7 +273,7 @@ function pushMessage(args) {
 		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle black">mood</i>'
 		args.nick = args.nick + ' <b style="background:#E5E5E5;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">YOU</b>';
 	}
-	else if (args.nick == '!') {
+	else if (args.nick == '系统菌') {
 		messageEl.classList.add('warn')
 		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle orange">error_outline</i>'
 		args.nick = args.nick + ' <b style="background:orange;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">SERVER</b>';
