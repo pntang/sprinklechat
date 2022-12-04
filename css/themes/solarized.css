@@ -45,9 +45,9 @@ ul.dropdown-content.select-dropdown li span:hover {
 	border: black !important;
 }
 li.collection-item.avatar {
-	background: #002b36 !important;
+	background: white !important;
 	color: #93a1a1 !important;
-	border-bottom: 1px solid #073642 !important;
+	border-bottom: 1px solid white !important;
 }
 .modal {
 	background: white;
