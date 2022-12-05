@@ -284,11 +284,11 @@ function pushMessage(args) {
 	}
 	else if (args.nick == 'SakuraBot') {
 		messageEl.innerHTML = messageEl.innerHTML + '<img src="img/users/bot.png" alt="" class="circle">'
-		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">系统</b>';
+		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">bot</b>';
 	}
 	else if (args.admin) {
 		messageEl.innerHTML = messageEl.innerHTML + '<img src="img/users/sprinkle.jpg" alt="" class="circle">'
-		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">系统</b>';
+		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">站长</b>';
 	}
 	else if (args.mod) {
 		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle green">verified_user</i>'
