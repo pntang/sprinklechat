@@ -287,7 +287,7 @@ function pushMessage(args) {
 		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">系统</b>';
 	}
 	else if (args.admin) {
-		messageEl.innerHTML = messageEl.innerHTML + '<img src="img/head/sprinkle.png" alt="" class="circle">'
+		messageEl.innerHTML = messageEl.innerHTML + '<img src="img/head/sprinkle.jpg" alt="" class="circle">'
 		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">系统</b>';
 	}
 	else if (args.mod) {
