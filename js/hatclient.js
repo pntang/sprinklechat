@@ -283,7 +283,7 @@ function pushMessage(args) {
 		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">服务器</b>';
 	}
 	else if (args.nick == 'SakuraBot') {
-		messageEl.innerHTML = messageEl.innerHTML + '<img src="img/users/bot.png" alt="" class="circle">'
+		messageEl.innerHTML = messageEl.innerHTML + '<img src="img/users/bot.jpg" alt="" class="circle">'
 		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">bot</b>';
 	}
 	else if (args.admin) {
