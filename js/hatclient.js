@@ -283,12 +283,12 @@ function pushMessage(args) {
 		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">服务器</b>';
 	}
 	else if (args.nick == 'SakuraBot') {
-		messageEl.innerHTML = messageEl.innerHTML + '<img src="img/hat.png" alt="" class="circle">'
+		messageEl.innerHTML = messageEl.innerHTML + '<img src="img/head/bot.png" alt="" class="circle">'
 		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">系统</b>';
 	}
 	else if (args.admin) {
-		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle red">verified_user</i>'
-		args.nick = args.nick + ' <b style="background:red;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">站长</b>';
+		messageEl.innerHTML = messageEl.innerHTML + '<img src="img/head/sprinkle.png" alt="" class="circle">'
+		args.nick = args.nick + ' <b style="background:black;padding:2px;padding-left:5px;padding-right:5px;border-radius:3px;color:white;margin-left:5px;">系统</b>';
 	}
 	else if (args.mod) {
 		messageEl.innerHTML = messageEl.innerHTML + '<i id="userimage" class="material-icons circle green">verified_user</i>'
