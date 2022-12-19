@@ -133,7 +133,7 @@ var COMMANDS = {
 		pushMessage(args)
 	},
 	warn: function(args) {
-		args.nick = '系统菌'
+		args.nick = '!'
 		pushMessage(args)
 	},
 	onlineSet: function(args) {
